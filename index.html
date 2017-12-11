@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div class="container mt-2 ">
+    <div class="row">
+        <div class="col-sm-4 calc-bg p-3 rounded m-auto">
+
+            <h4 class="text-center text-white font-weight-bold">Simple Calculator</h4>
+
+            <div class="input-group col-sm-12 mt-1">
+                <span class="input-group-addon col-sm-5">First Number</span>
+                <input type="text" class="form-control col-sm-7" id="firstNumber">
+            </div>
+            <div class="input-group col-sm-12 mt-1">
+                <span class="input-group-addon col-sm-5" >Second Number</span>
+                <input type="text" class="form-control col-sm-7" id="secondNumber">
+            </div>
+            <div class="input-group col-sm-12 mt-1">
+                <span class="input-group-addon col-sm-5" >Result</span>
+                <input type="text" class="form-control col-sm-7" id="result">
+            </div>
+            <div class="input-group col-sm-12 ml-auto mt-2">
+                <input type="submit" value="+" class="col btn btn-dark mr-2" id="addition"/>
+                <input type="submit" value="-" class="col btn btn-dark mr-2" id="subtraction"/>
+                <input type="submit" value="&Cross;" class="col btn btn-dark mr-2" id="multiplication"/>
+                <input type="submit" value="&div;" class="col btn btn-dark mr-2" id="division"/>
+                <input type="submit" value="%" class="col btn btn-dark" id="reminder"/>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--Linking JavaScript files-->
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/my-script.js"></script>
+</body>
+</html>
