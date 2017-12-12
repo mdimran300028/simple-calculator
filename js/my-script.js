@@ -1,96 +1,193 @@
+// Display
+var Display = document.getElementById('display');
 
-// var add = document.getElementById('addition');
-// var subtract = document.getElementById('subtraction');
-// var multiply = document.getElementById('multiplication');
-// var divide = document.getElementById('division');
-// var remind = document.getElementById('reminder');
-//
-// add.onclick = function () {
-//     var firstNumberValue = Number(document.getElementById('firstNumber').value) ;
-//     var lastNumberValue = Number(document.getElementById('lastNumber').value);
-//
-//     document.getElementById('result').value = firstNumberValue+lastNumberValue;
-// }
-//
-// subtract.onclick = function () {
-//     var firstNumberValue = document.getElementById('firstNumber').value;
-//     var lastNumberValue = document.getElementById('lastNumber').value;
-//
-//     document.getElementById('result').value = firstNumberValue-lastNumberValue;
-// }
-//
-// multiply.onclick = function () {
-//     var firstNumberValue = document.getElementById('firstNumber').value;
-//     var lastNumberValue = document.getElementById('lastNumber').value;
-//
-//     document.getElementById('result').value = firstNumberValue*lastNumberValue;
-// }
-//
-// divide.onclick = function () {
-//     var firstNumberValue = document.getElementById('firstNumber').value;
-//     var lastNumberValue = document.getElementById('lastNumber').value;
-//
-//     document.getElementById('result').value = firstNumberValue/lastNumberValue;
-// }
-//
-// remind.onclick = function () {
-//     var firstNumberValue = document.getElementById('firstNumber').value;
-//     var lastNumberValue = document.getElementById('lastNumber').value;
-//
-//     document.getElementById('result').value = firstNumberValue%lastNumberValue;
-// }
-//
+// First row
+var Sine    = document.getElementById('sine');
+var Cosine  = document.getElementById('cosine');
+var Tan     = document.getElementById('tangent');
+var Log     = document.getElementById('log');
+var Integer = document.getElementById('integer');
 
-var addNumber = document.getElementById('addition');
-var subtractNumber = document.getElementById('subtraction');
-var multiplyNumber = document.getElementById('multiplication');
-var divideNumber = document.getElementById('division');
-var remindNumber = document.getElementById('reminder');
+// Second row
+var Absolute= document.getElementById('abs');
+var Square  = document.getElementById('square');
+var Cube    = document.getElementById('cube');
+var Exp     = document.getElementById('exp');
+var Root    = document.getElementById('root');
 
+// Third row
+var Seven   = document.getElementById('seven');
+var Eight   = document.getElementById('eight');
+var Nine    = document.getElementById('nine');
+var Delete  = document.getElementById('del');
+var allClear= document.getElementById('clear');
 
-// Function for Addition
-addNumber.onclick = function () {
-    var firsNo = Number(document.getElementById('firstNumber').value);
-    var secondNo =Number(document.getElementById('secondNumber').value);
-    var sum = firsNo + secondNo;
+// Forth row
+var Four    = document.getElementById('four');
+var Five    = document.getElementById('five');
+var Six     = document.getElementById('six');
+var Product = document.getElementById('product');
+var Divide  = document.getElementById('divide');
 
-    var res = document.getElementById('result');
-    res.value = sum;
+// Fifth row
+var One     = document.getElementById('one');
+var Two     = document.getElementById('two');
+var Three   = document.getElementById('three');
+var Sum     = document.getElementById('sum');
+var Diff    = document.getElementById('difference');
+
+// Sixth row
+var Zero    = document.getElementById('zero');
+var Dot     = document.getElementById('decimal');
+var TenExp  = document.getElementById('tenExp');
+var Ans = document.getElementById('ans');
+var Result  = document.getElementById('result');
+
+//Current Memory
+var Memory ;
+
+// First row's function's
+Sine.onclick = function () {
+    var theta = eval(document.getElementById('display').value);
+    theta = (theta*Math.PI/180);
+    var result = Math.sin(theta);
+    Memory = result;
+    Display.value = result;
+}
+Cosine.onclick = function () {
+    var theta = eval(document.getElementById('display').value);
+    theta = (theta*Math.PI/180);
+    var result = Math.cos(theta);
+    Memory = result;
+    Display.value = result;
+}
+Tan.onclick = function () {
+    var theta = eval(document.getElementById('display').value);
+    theta = (theta*Math.PI/180);
+    var result = Math.tan(theta);
+    Memory = result;
+    Display.value = result;
 }
 
-subtractNumber.onclick = function () {
-    var firsNo = Number(document.getElementById('firstNumber').value);
-    var secondNo =Number(document.getElementById('secondNumber').value);
-    var difference = firsNo - secondNo;
-
-    var res = document.getElementById('result');
-    res.value = difference;
-
+Log.onclick = function () {
+    var val = eval(document.getElementById('display').value);
+    var result = Math.log(val);
+    Memory = result;
+    Display.value = result;
+}
+Integer.onclick = function () {
+    var val = document.getElementById('display').value;
+    var result = Math.round(val);
+    Memory = result;
+    Display.value = result;
 }
 
-multiplyNumber.onclick = function () {
-    var firsNo = Number(document.getElementById('firstNumber').value);
-    var secondNo =Number(document.getElementById('secondNumber').value);
-    var product = firsNo * secondNo;
-
-    var res = document.getElementById('result');
-    res.value = product;
+// Second rows function's
+Absolute.onclick = function () {
+    var val = eval(document.getElementById('display').value);
+    var result = Math.abs(val);
+    Memory = result;
+    Display.value = result;
+}
+Square.onclick = function () {
+    var val = eval(document.getElementById('display').value);
+    var result = val*val;
+    Memory = result;
+    Display.value = result;
+}
+Cube.onclick = function () {
+    var val = eval(document.getElementById('display').value);
+    var result = val*val*val;
+    Memory = result;
+    Display.value = result;
+}
+Exp.onclick = function () {
+    var val = eval(document.getElementById('display').value);
+    var result = Math.exp(val);
+    Memory = result;
+    Display.value = result;
+}
+Root.onclick = function () {
+    var val =eval(document.getElementById('display').value);
+    var result = Math.sqrt(val);
+    Memory = result;
+    Display.value = result;
 }
 
-divideNumber.onclick = function () {
-    var firsNo = Number(document.getElementById('firstNumber').value);
-    var secondNo =Number(document.getElementById('secondNumber').value);
-    var quotient = firsNo / secondNo;
-
-    var res = document.getElementById('result');
-    res.value = quotient;
+//Third row's functions
+Seven.onclick = function () {
+    Display.value += "7";
+}
+Eight.onclick = function () {
+    Display.value += "8";
+}
+Nine.onclick = function () {
+    Display.value += "9";
+}
+Delete.onclick = function () {
+    Display.value = "";
+}
+allClear.onclick = function () {
+    Memory = 0;
+    Display.value = "";
 }
 
-remindNumber.onclick = function () {
-    var firsNo = Number(document.getElementById('firstNumber').value);
-    var secondNo =Number(document.getElementById('secondNumber').value);
-    var reminder = firsNo % secondNo;
+//Fourth row's functions
+Four.onclick = function () {
+    Display.value += "4";
+}
+Five.onclick = function () {
+    Display.value += "5";
+}
+Six.onclick = function () {
+    Display.value += "6";
+}
+Product.onclick = function () {
+    Display.value += "*";
+}
+Divide.onclick = function () {
+    Display.value += "/";
+}
 
-    var res = document.getElementById('result');
-    res.value = reminder;
+
+//Fifth row's functions
+One.onclick = function () {
+    Display.value += "1";
+}
+Two.onclick = function () {
+    Display.value += "2";
+}
+Three.onclick = function () {
+    Display.value += "3";
+}
+Sum.onclick = function () {
+    Display.value += "+";
+}
+Diff.onclick = function () {
+    Display.value += "-";
+}
+
+//Fifth row's functions
+Zero.onclick = function () {
+    Display.value += "0";
+}
+Dot.onclick = function () {
+    Display.value += ".";
+}
+TenExp.onclick = function () {
+    var val = eval(document.getElementById('display').value);
+    var result =1;
+    for(var i=0; i<val; i++){
+        result *=10;
+    }
+    Memory = result;
+    Display.value = result;
+}
+Ans.onclick = function () {
+    Display.value = Memory;
+}
+Result.onclick = function () {
+    var Result = eval(document.getElementById('display').value);
+    Memory = Result;
+    Display.value = Result;
 }

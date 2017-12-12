@@ -13,26 +13,60 @@
     <div class="row">
         <div class="col-sm-4 calc-bg p-3 rounded m-auto">
 
-            <h4 class="text-center text-white font-weight-bold">Simple Calculator</h4>
+            <h4 class="text-center text-white font-weight-bold">Mini Scientific Calculator</h4>
 
             <div class="input-group col-sm-12 mt-1">
-                <span class="input-group-addon col-sm-5">First Number</span>
-                <input type="text" class="form-control col-sm-7" id="firstNumber">
+                <input type="text" placeholder="0" class="form-control text-right col-sm-12 display" id="display">
             </div>
-            <div class="input-group col-sm-12 mt-1">
-                <span class="input-group-addon col-sm-5" >Second Number</span>
-                <input type="text" class="form-control col-sm-7" id="secondNumber">
+
+            <div class="input-group col-sm-12 ml-auto mt-2">
+                <input type="button" value="sin" class="col btn btn-dark mr-2" id="sine"/>
+                <input type="button" value="cos" class="col btn btn-dark mr-2" id="cosine"/>
+                <input type="button" value="tan" class="col btn btn-dark mr-2" id="tangent"/>
+                <input type="button" value="log" class="col btn btn-dark mr-2" id="log"/>
+                <input type="button" value="lnt" class="col btn btn-dark" id="integer"/>
+
             </div>
-            <div class="input-group col-sm-12 mt-1">
-                <span class="input-group-addon col-sm-5" >Result</span>
-                <input type="text" class="form-control col-sm-7" id="result">
+
+            <div class="input-group col-sm-12 ml-auto mt-2">
+                <input type="button" value="abs" class="col btn btn-dark mr-2" id="abs"/>
+                <button type="button" value="" class="col btn btn-dark mr-2" id="square">x<sup> 2</sup></button>
+                <button type="button" value="" class="col btn btn-dark mr-2" id="cube">x<sup> 3</sup></button>
+                <button type="button" value="" class="col btn btn-dark mr-2" id="exp">e<sup> x</sup></button>
+                <input type="button" value="&#8730;" class="col btn btn-dark" id="root"/>
+
+            </div>
+
+            <div class="input-group col-sm-12 ml-auto mt-2">
+                <input type="button" value="7" class="col btn btn-dark mr-2" id="seven"/>
+                <input type="button" value="8" class="col btn btn-dark mr-2" id="eight"/>
+                <input type="button" value="9" class="col btn btn-dark mr-2" id="nine"/>
+                <input type="button" value="DEL" class="col btn btn-warning mr-2 text-white font-weight-bold" id="del"/>
+                <input type="button" value="AC" class="col btn btn-danger font-weight-bold" id="clear"/>
+
             </div>
             <div class="input-group col-sm-12 ml-auto mt-2">
-                <input type="submit" value="+" class="col btn btn-dark mr-2" id="addition"/>
-                <input type="submit" value="-" class="col btn btn-dark mr-2" id="subtraction"/>
-                <input type="submit" value="&Cross;" class="col btn btn-dark mr-2" id="multiplication"/>
-                <input type="submit" value="&div;" class="col btn btn-dark mr-2" id="division"/>
-                <input type="submit" value="%" class="col btn btn-dark" id="reminder"/>
+                <input type="button" value="4" class="col btn btn-dark mr-2" id="four"/>
+                <input type="button" value="5" class="col btn btn-dark mr-2" id="five"/>
+                <input type="button" value="6" class="col btn btn-dark mr-2" id="six"/>
+                <input type="button" value="&Cross;" class="col btn btn-dark mr-2" id="product"/>
+                <input type="button" value="&div;" class="col btn btn-dark" id="divide"/>
+
+            </div>
+            <div class="input-group col-sm-12 ml-auto mt-2">
+                <input type="button" value="1" class="col btn btn-dark mr-2" id="one"/>
+                <input type="button" value="2" class="col btn btn-dark mr-2" id="two"/>
+                <input type="button" value="3" class="col btn btn-dark mr-2" id="three"/>
+                <input type="button" value="+" class="col btn btn-dark mr-2" id="sum"/>
+                <input type="button" value="-" class="col btn btn-dark" id="difference"/>
+
+            </div>
+            <div class="input-group col-sm-12 ml-auto mt-2">
+                <input type="button" value="0" class="col btn btn-dark mr-2" id="zero"/>
+                <input type="button" value="." class="col btn btn-dark mr-2" id="decimal"/>
+                <input type="button" value="EXP" class="col btn btn-dark mr-2" id="tenExp"/>
+                <input type="button" value="Ans" class="col btn btn-dark mr-2" id="ans"/>
+                <input type="button" value="=" class="col btn btn-dark" id="result"/>
 
             </div>
         </div>
